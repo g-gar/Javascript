@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			var peopleProto = function peopleProto(){
+				this.name = 'no name'
+				this.age = ''
+			}
+
+			peopleProto.prototype.getName = function(){
+				return this.name
+			}
+			peopleProto.prototype.setName = function(name){
+				this.name = name||'otherTempName'
+			}
+		</script>
+	</head>
+	<body>
+	<script>
+		window.onload = function(){
+			var p = document.getElementsByTagName('p')[0]
+
+			var person1 = new peopleProto()
+			person1.name = 'persona 1'
+
+			p.innerHTML = Object.getOwnPropertyNames(person1)
+			p.innerHTML += '<br>' + person1.name
+		}
+
+		</script>
+		<p>asdf</p>
+	</body>
+</html>
