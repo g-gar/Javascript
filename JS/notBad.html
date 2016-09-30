@@ -10,10 +10,10 @@
 				p.innerHTML = 'addTo: ' + addTo(20)(35)
 
 				var objProto = function(){
-					this.name = 'objectName'
+					this.number = 6
 				}
 				var obj1 = new objProto()
-				p += '<br>getName (Object.call): ' + sayHello.call(obj1, obj1.name)
+				p += '<br>getName (Object.call): ' + multiply.call(obj1, 3)
 			}
 		</script>
 		<p></p>

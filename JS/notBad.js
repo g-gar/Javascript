@@ -7,6 +7,6 @@ function addTo(passed){
 }
 
 // Object.call
-function sayHello(name){
-	return 'Hello, ' + name
+function multiply(number){
+	return this.number + number
 }
