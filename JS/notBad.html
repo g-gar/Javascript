@@ -8,6 +8,12 @@
 			window.onload = function(){
 				var p = document.getElementsByTagName('p')[0]
 				p.innerHTML = 'addTo: ' + addTo(20)(35)
+
+				var objProto = function(){
+					this.name = 'objectName'
+				}
+				var obj1 = new objProto()
+				p += '<br>getName (Object.call): ' + sayHello.call(obj1, obj1.name)
 			}
 		</script>
 		<p></p>
